@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Airports Test App</title>
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="my-nav navbar navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Toggler Navbar-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- Nav header -->
+            <div class="navbar-header">
+                <a class="navbar-brand text-white" href="index.html">Airports Test App</a>
+            </div>
+            <!-- Nav list -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Airports -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="airports.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Airports
+                        </a>
+                    </li>
+                    <!-- Flights -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="flights.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Flights
+                        </a> 
+                    </li>
+                    <!-- Planes -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="planes.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Planes
+                        </a> 
+                    </li>
+                </ul>
+                <!-- User login / signup  -->
+                <ul class="navbar-nav mr-0">
+                    <!-- Sign up -->
+                    <li class="nav-item m-1">
+                        <a href="" class="text-white pr-3"><i class="fa fa-user" aria-hidden="true"></i> 
+                            Sign Up
+                        </a>
+                    </li>
+                    <!-- Login -->
+                    <li class="nav-item m-1">
+                        <a href="#" class="text-white">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> 
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide my-carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- Airports -->   
+            <div class="carousel-item active">
+                <a href="airports.html">
+                    <h1 class="cover-title display-3">AIRPORTS</h1>
+                    <img class="d-block w-100 img-fluid" src="assets/imgs/airport-cover.jpg" alt="airports">
+                </a>
+            </div>
+            <!-- Flights -->
+            <div class="carousel-item">
+                <a href="flights.html">
+                    <h1 class="cover-title display-3">FLIGHTS</h1>
+                    <img class="d-block w-100 img-fluid" src="assets/imgs/flights-cover.jpg" alt="flights">
+                </a>
+            </div>
+            <!-- Planes -->
+            <div class="carousel-item">
+                <a href="planes.html">
+                    <h1 class="cover-title display-3">PLANES</h1>
+                    <img class="d-block w-100 img-fluid" src="assets/imgs/plane-cover.jpg" alt="planes">
+                </a>
+            </div>
+        </div>
+        <!-- Previous -->
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <!-- Next -->
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- Small screen preview -->
+    <div class="links">
+        <!-- Airports -->
+        <div class="link">
+            <a href="">
+                <h1 class="cover-title display-3">AIRPORTS</h1>
+                <img class="img-fluid" src="assets/imgs/airport-cover.jpg" alt="airports">
+            </a>
+        </div>
+        <!-- Flights -->
+        <div class="link">
+            <a href="">
+                <h1 class="cover-title display-3">FLIGHTS</h1>
+                <img class="img-fluid" src="assets/imgs/flights-cover.jpg" alt="flights">
+            </a>
+        </div>
+        <!-- Planes -->
+        <div class="link">
+            <a href="">
+                <h1 class="cover-title display-3">PLANES</h1>
+                <img class="img-fluid" src="assets/imgs/plane-cover.jpg" alt="planes">
+            </a>
+        </div>
+    </div>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

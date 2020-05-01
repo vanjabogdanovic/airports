@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Airports Test App</title>
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <nav class="my-nav navbar navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Toggler Navbar-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- Nav header -->
+            <div class="navbar-header">
+                <a class="navbar-brand text-white" href="index.html">Airports Test App</a>
+            </div>
+            <!-- Nav list -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Airports -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="airports.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Airports
+                        </a>
+                    </li>
+                    <!-- Flights -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="flights.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Flights
+                        </a> 
+                    </li>
+                    <!-- Planes -->
+                    <li class="nav-item nav-divider m-2">
+                        <a href="planes.html" class="text-white pr-3 border border-right-0 border-top-0 border-bottom-0 border-white p-2">
+                            Planes
+                        </a> 
+                    </li>
+                </ul>
+                <!-- User login / signup  -->
+                <ul class="navbar-nav mr-0">
+                    <!-- Sign up -->
+                    <li class="nav-item m-1">
+                        <a href="#" class="text-white pr-3"><i class="fa fa-user" aria-hidden="true"></i> 
+                            Sign Up
+                        </a>
+                    </li>
+                    <!-- Login -->
+                    <li class="nav-item m-1">
+                        <a href="#" class="text-white">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> 
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Airport jumbotron -->
+    <div class="jumbotron">
+        <h1 class="text-center text-white display-3 mb-3">Planes</h1>
+        <p class="text-center text-white text-about">Create and modify planes informations</p>
+    </div>
+    <div class="container" id="air-cont">
+        <div class="row">
+            <div class="col-12">
+                <!-- Alert box -->
+                <div class="alert alert-success alert-dismissible fade show d-none" id="alert-box">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong>
+                </div>
+                <!-- Create airport -->
+                <div id="create">
+                    <form action="" id="form-airport">
+                        <!-- Title -->
+                        <legend class="display-4 text-center pb-4">Create new plane</legend>
+                        <!-- Name input -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" 
+                            name="name" id="name" placeholder="Name">
+                        </div>
+                        <!-- City input -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" name="model" id="model" placeholder="Model">
+                        </div>
+                        <!-- Image input -->
+                        <div class="input-group w-50 my-input" id='image'>
+                            <div class="input-group-prepend">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                            </div>
+                        </div>
+                        <!-- OACI input -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" name="year" id="year" placeholder="Year">
+                        </div>
+                        <!-- Submit new airport -->
+                        <button class="btn btn-outline-dark w-50" type="submit" id="submit-airport">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Update Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <!-- Close button -->
+                    <span class="close">&times;</span>
+                    <!-- Update airport info -->
+                    <form action="" id="form-update-airport">
+                        <!-- Title -->
+                        <legend class="display-4 text-center pb-4">Update airport</legend>
+                        <!-- Update airport name -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" 
+                            name="name" id="name-update">
+                        </div>
+                        <!-- Update airport city -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" 
+                            name="model" id="model-update">
+                        </div>
+                        <!-- Update airport image -->
+                        <div class="input-group my-input" id="img">
+                            <div class="input-group-prepend">
+                                <input type="file" class="custom-file-input" id="image-update" aria-describedby="image-update">
+                                <label class="custom-file-label" for="image-update">Choose image</label>
+                            </div>
+                        </div>
+                        <!-- Update airport oaci -->
+                        <div class="form-group">
+                            <input class="form-control float-left my-input" type="text" name="year" id="year-update">
+                        </div>
+                        <!-- Update info button -->
+                        <button class="btn btn-outline-dark btn-block my-input" type="submit" id="update-plane">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show all airports -->
+    <div class="container air">
+        <div class="row" id="main">
+            <!-- Airports -->
+        </div>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- Main script -->
+    <script src="assets/js/modules/planes.js" type="module"></script>
+    <!-- Axios -->
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
