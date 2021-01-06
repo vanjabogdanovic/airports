@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^9.10.12",
     "tata-js": "^0.1.5"
